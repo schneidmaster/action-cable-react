@@ -1,0 +1,16 @@
+{
+  "name": "action-cable-react",
+  "description": "Use Rails 5 ActionCable channels as React stores for realtime magic.",
+  "main": "dist/action_cable_react.min.js",
+  "authors": [
+    "Zach Schneider <zach@schneid.io>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "rails",
+    "actioncable",
+    "react"
+  ],
+  "homepage": "https://github.com/schneidmaster/action-cable-react",
+  "moduleType": []
+}
