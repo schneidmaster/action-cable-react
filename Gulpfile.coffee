@@ -1,8 +1,8 @@
-gulp           = require('gulp')
-del            = require('del')
-webpack        = require('webpack-stream')
-uglify         = require('gulp-uglify')
-rename         = require('gulp-rename')
+gulp    = require('gulp')
+del     = require('del')
+webpack = require('webpack-stream')
+uglify  = require('gulp-uglify')
+rename  = require('gulp-rename')
 
 gulp.task 'clean', ->
   del(['dist/**/*'])
