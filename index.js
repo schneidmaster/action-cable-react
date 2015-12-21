@@ -1,7 +1,6 @@
 module.exports = {
-  ActionCable: require('./dist/action_cable.min'),
-  Cable: require('./dist/cable.min'),
-  CableMixin: require('./dist/cable_mixin.min'),
-  ChannelMixin: require('./dist/channel_mixin.min'),
+  Cable: require('./dist/cable'),
+  CableMixin: require('./dist/cable_mixin'),
+  ChannelMixin: require('./dist/channel_mixin'),
   version: require('./version')
 };
