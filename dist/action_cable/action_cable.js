@@ -1,0 +1,1 @@
+var ActionCable,Consumer;Consumer=require("./consumer"),ActionCable={createConsumer:function(e){return new Consumer(this.createWebSocketURL(e))},createWebSocketURL:function(e){var r;return e&&!/^wss?:/i.test(e)?(r=document.createElement("a"),r.href=e,r.href=r.href,r.protocol=r.protocol.replace("http","ws"),r.href):e}},module.exports=ActionCable;

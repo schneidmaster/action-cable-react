@@ -17,7 +17,7 @@ CableMixin = (React) ->
       cable: @getCable()
     }
   
-  getFlux: ->
+  getCable: ->
     @props.cable or @context and @context.cable
 
 CableMixin.componentWillMount = ->

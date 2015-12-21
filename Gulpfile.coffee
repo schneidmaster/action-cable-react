@@ -9,7 +9,7 @@ gulp.task 'clean', ->
   del(['dist/**/*'])
 
 gulp.task 'coffee', ['clean'], ->
-  gulp.src('lib/*.coffee')
+  gulp.src('lib/**/*.coffee')
     .pipe(coffee(bare: true))
     .pipe(uglify())
     .pipe(gulp.dest('dist'))
@@ -25,3 +25,6 @@ gulp.task 'default', [
   'coffee'
   'bowerPack'
 ]
+
+gulp.task 'watch', ->
+  gulp.watch ['lib/**/*.coffee'], ['default']

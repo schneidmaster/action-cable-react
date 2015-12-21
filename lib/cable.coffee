@@ -4,3 +4,5 @@ class Cable
 
   channel: (name) ->
     @channels[name]
+
+module.exports = Cable
