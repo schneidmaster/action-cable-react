@@ -9,27 +9,31 @@ ChannelMixin = ->
       @mounted = true
 
       for channel in channelNames
-        cable.channel(channel).on 'connected', @handleConnected
-        cable.channel(channel).on 'disconnected', @handleDisconnected
-        cable.channel(channel).on 'rejected', @handleDisconnected
+        cable.channel(channel).on 'connected', @handleConnected if @handleConnected?
+        cable.channel(channel).on 'disconnected', @handleDisconnected if @handleDisconnected?
+        cable.channel(channel).on 'rejected', @handleDisconnected if @handleDisconnected?
+        cable.channel(channel).on 'received', @handleReceived if @handleReceived?
 
         for action in cable.channel(channel).actions
-          cable.channel(channel).on action, @["handle#{_capitalize(action)}"]()
+          actionMethod = "handle#{_capitalize(action)}"
+          cable.channel(channel).on action, @[actionMethod] if @[actionMethod]?
 
     componentWillUnmount: ->
       cable = @props.cable or @context.cable
       @mounted = false
       for channel in channelNames
-        cable.channel(channel).removeListener 'connected', @handleConnected
-        cable.channel(channel).removeListener 'disconnected', @handleDisconnected
-        cable.channel(channel).removeListener 'rejected', @handleDisconnected
+        cable.channel(channel).removeListener 'connected', @handleConnected if @handleConnected?
+        cable.channel(channel).removeListener 'disconnected', @handleDisconnected if @handleDisconnected?
+        cable.channel(channel).removeListener 'rejected', @handleDisconnected if @handleDisconnected?
+        cable.channel(channel).removeListener 'received', @handleReceived if @handleReceived?
 
         for action in cable.channel(channel).actions
-          cable.channel(channel).removeListener action, @["handle#{_capitalize(action)}"]()
+          actionMethod = "handle#{_capitalize(action)}"
+          cable.channel(channel).removeListener action, @[actionMethod] if @[actionMethod]?
 
-    perform: (channel, action, params = {}) ->
+    perform: (channel, action, data = {}) ->
       cable = @props.cable or @context.cable
-      cable.channel(channel).perform(action, params)
+      cable.channel(channel).perform(action, data)
   }
 
 ChannelMixin.componentWillMount = ->

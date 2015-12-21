@@ -6,7 +6,7 @@ class Subscriptions
     @subscriptions = []
     @history = []
 
-  create: (channelName, actions=[]) ->
+  create: (channelName, actions) ->
     channel = channelName
     params = if typeof channel is 'object' then channel else {channel}
     new Subscription @, params, actions

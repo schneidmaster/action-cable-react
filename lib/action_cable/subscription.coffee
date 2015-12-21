@@ -1,15 +1,8 @@
 EventEmitter = require('eventemitter3')
 
 class Subscription extends EventEmitter
-  constructor: (@subscriptions, params = {}, @actions) ->
+  constructor: (@subscriptions, params = {}, @actions = []) ->
     @identifier = JSON.stringify(params)
-
-    mixin = {}
-    for action in @actions
-      mixin[action] = ->
-        @emit(action)
-
-    extend(@, mixin)
     @subscriptions.add(@)
     @consumer = @subscriptions.consumer
 
@@ -24,10 +17,19 @@ class Subscription extends EventEmitter
   unsubscribe: ->
     @subscriptions.remove(@)
 
-  extend = (object, properties) ->
-    if properties?
-      for key, value of properties
-        object[key] = value
-    object
+  connected: ->
+    @emit('connected')
+
+  disconnected: ->
+    @emit('disconnected')
+
+  rejected: ->
+    @emit('rejected')
+
+  received: (data) ->
+    if data.action in @actions
+      @emit(data.action, data)
+    else
+      @emit('received', data)
 
 module.exports = Subscription

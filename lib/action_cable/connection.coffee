@@ -47,7 +47,7 @@ class Connection
 
   installEventHandlers: ->
     for eventName of @events
-      handler = @events[eventName].bind(this)
+      handler = @events[eventName].bind(@)
       @webSocket["on#{eventName}"] = handler
     return
 
