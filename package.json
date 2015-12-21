@@ -32,7 +32,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
-    "action-cable": "^0.1.0",
+    "action-cable": "^0.1.2",
     "lodash.capitalize": "^3.0.0"
   }
 }
