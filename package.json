@@ -1,7 +1,7 @@
 {
   "name": "action-cable-react",
   "version": "0.1.0",
-  "description": "Use Rails 5 ActionCable channels as React stores for realtime magic.",
+  "description": "Use Rails 5 ActionCable channels with React for realtime magic.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
