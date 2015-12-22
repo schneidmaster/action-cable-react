@@ -12,5 +12,17 @@
     "react"
   ],
   "homepage": "https://github.com/schneidmaster/action-cable-react",
-  "moduleType": []
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "lib",
+    "node_modules",
+    ".npmignore",
+    "bower.coffee",
+    "Gulpfile.coffee",
+    "index.js",
+    "package.json",
+    "version.js",
+    "webpack.config.coffee"
+  ]
 }

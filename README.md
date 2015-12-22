@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/action-cable-react.svg)](https://badge.fury.io/js/action-cable-react)
+
 # ActionCable + React
 
 Use Rails 5 ActionCable channels with React for realtime magic.
