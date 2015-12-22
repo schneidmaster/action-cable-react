@@ -9,7 +9,7 @@ Use Rails 5 ActionCable channels with React for realtime magic.
 
 action-cable-react is a npm/bower package to bind one or more [ActionCable](https://github.com/rails/rails/tree/master/actioncable) channels to React components. This allows you to define how each individual component should respond to new messages from each channel, bringing ActionCable nicely in line with the React data model and permitting usage with a Rails API and standalone frontend React application.
 
-Make sure to check out the example [server](https://github.com/schneidmaster/action-cable-react-example-server) and client([ES6](https://github.com/schneidmaster/action-cable-react-example-client) or [CoffeeScript](https://github.com/schneidmaster/action-cable-react-example-coffee)) applications to try it out for yourself.
+Make sure to check out the example [server](https://github.com/schneidmaster/action-cable-react-example-server) and client ([ES6](https://github.com/schneidmaster/action-cable-react-example-client) or [CoffeeScript](https://github.com/schneidmaster/action-cable-react-example-coffee)) applications to try it out for yourself.
 
 ## Usage
 
