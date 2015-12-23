@@ -1,7 +1,7 @@
 {
   "name": "action-cable-react",
   "description": "Use Rails 5 ActionCable channels with React for realtime magic.",
-  "main": "dist/action_cable_react.min.js",
+  "main": "dist/action_cable_react.js",
   "authors": [
     "Zach Schneider <zach@schneid.io>"
   ],
