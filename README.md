@@ -1,6 +1,10 @@
 [![npm version](https://badge.fury.io/js/action-cable-react.svg)](https://badge.fury.io/js/action-cable-react)
 [![Bower version](https://badge.fury.io/bo/action-cable-react.svg)](https://badge.fury.io/bo/action-cable-react)
 
+# Status
+
+I'm no longer actively maintaining this package, and it may not work with newer versions of React and/or Rails. Feel free to submit PRs or open an issue if you're interested in becoming a maintainer.
+
 # ActionCable + React
 
 Use Rails 5 ActionCable channels with React for realtime magic.
