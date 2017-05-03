@@ -1,9 +1,6 @@
-[![npm version](https://badge.fury.io/js/action-cable-react.svg)](https://badge.fury.io/js/action-cable-react)
-[![Bower version](https://badge.fury.io/bo/action-cable-react.svg)](https://badge.fury.io/bo/action-cable-react)
+# Deprecated
 
-# Status
-
-I'm no longer actively maintaining this package, and it may not work with newer versions of React and/or Rails. Feel free to submit PRs or open an issue if you're interested in becoming a maintainer.
+I don't have time to properly maintain this package and it may not work with the latest versions of React and/or Rails. This package also still uses mixins which are [considered harmful](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html). I recommend replacing with [react-actioncable-provider](https://github.com/cpunion/react-actioncable-provider) which offers similar functionality using a higher-order component and is up to date with the latest versions.
 
 # ActionCable + React
 
